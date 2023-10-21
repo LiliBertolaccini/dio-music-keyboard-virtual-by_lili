@@ -1,12 +1,14 @@
+
+
 const pianoKeys = document.querySelectorAll(".piano-keys .key");
 const volumeSlider = document.querySelector(".volume-slider input");
 const keysCheck = document.querySelector(".keys-check input");
 
 let mapedKeys = [];
-let audio = new Audio("src/tunes/a.wav");
+let audio = new Audio("src/audio/a.wav");
 
 const playTune = (key) => {
-  audio.src = `src/tunes/${key}.wav`;
+  audio.src = `src/audio/${key}.wav`;
   audio.play();
 
   const clickedKey = document.querySelector(`[data-key="${key}"]`);
@@ -38,3 +40,22 @@ const showHideKeys = () => {
 volumeSlider.addEventListener("input", handleVolume);
 
 keysCheck.addEventListener("click", showHideKeys);
+
+//o comentário abaixo é o som do piando não ficar tatattaatatata e sim igual ao pianoKeys, mas seguindo ao Readme.
+//let mapedKeys = [];
+//let audio;
+//let activeKey = null;
+
+//const playTune = (key) => {
+//  if (audio) {
+//    audio.pause();
+//  }
+
+//  audio = new Audio(`src/audio/${key}.wav`);
+//  audio.volume = volumeSlider.value;
+//  audio.play();
+
+//  const clickedKey = document.querySelector(`[data-key="${key}"]`);
+//  clickedKey.classList.add("active");
+//  activeKey = clickedKey;
+//};

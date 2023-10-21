@@ -22,6 +22,7 @@
   <div class="container">
     <header>
       <h2>Virtual Piano</h2>
+      <!--(div.column>span)*2-->
       <div class="column volume-slider">
         <span>Volume</span> <input type="range" min="0" max="1" value="0.5" step="any">
       </div>
@@ -29,25 +30,27 @@
         <span>Teclas</span> <input type="checkbox" checked>
       </div>
     </header>
+    <!--ul.li-keys>(li.key>span)*16  atalho para criação em massa tag.classe-->
     <ul class="piano-keys">
       <li class="key white" data-key="a"><span>a</span></li>
       <li class="key black" data-key="w"><span>w</span></li>
       <li class="key white" data-key="s"><span>s</span></li>
       <li class="key black" data-key="e"><span>e</span></li>
       <li class="key white" data-key="d"><span>d</span></li>
-      <li class="key black" data-key="f"><span>f</span></li>
-      <li class="key white" data-key="t"><span>t</span></li>
-      <li class="key black" data-key="g"><span>g</span></li>
-      <li class="key white" data-key="y"><span>y</span></li>
-      <li class="key black" data-key="h"><span>h</span></li>
-      <li class="key white" data-key="u"><span>u</span></li>
-      <li class="key black" data-key="j"><span>j</span></li>
-      <li class="key white" data-key="k"><span>k</span></li>
-      <li class="key black" data-key="o"><span>o</span></li>
-      <li class="key white" data-key="l"><span>l</span></li>
-      <li class="key black" data-key="p"><span>p</span></li>
-      <li class="key white" data-key=";"><span>;</span></li>
+      <li class="key black" data-key="f"><span>r</span></li>
+      <li class="key white" data-key="t"><span>f</span></li>
+      <li class="key black" data-key="g"><span>t</span></li>
+      <li class="key white" data-key="y"><span>g</span></li>
+      <li class="key black" data-key="h"><span>y</span></li>
+      <li class="key white" data-key="u"><span>h</span></li>
+      <li class="key black" data-key="j"><span>u</span></li>
+      <li class="key white" data-key="k"><span>j</span></li>
+      <li class="key black" data-key="o"><span>i</span></li>
+      <li class="key white" data-key="l"><span>k</span></li>
+      <li class="key black" data-key="p"><span>o</span></li>
+      <li class="key white" data-key=";"><span>l</span></li>
     </ul>
+    <!--data-set = guardar valores em um elemento html como variaveis e acessar no js, no caso data-key-->
   </div>
 
   <script src="./src/scripts/engine.js" defer></script>

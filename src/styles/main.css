@@ -50,6 +50,8 @@ header .column span {
   position: relative;
 }
 
+/*position: relative posiciona um elemento em relação à sua própria posição normal na página, outros elementos podem ser afetados pela posição, já que ele ainda ocupa espaço em seu layout normal.*/
+
 .keys-check input::before {
   content: "";
   height: 20px;
@@ -62,6 +64,8 @@ header .column span {
   transform: translateY(-50%);
   transition: all 0.3s ease;
 }
+/* :: pseudo-elemnto usado para acrescentar conteudo. sempre com o content: " "  ; */
+/*position: absolute, ele é posicionado em relação ao elemento pai mais próximo que tenha uma posição definida (relative, absolute, fixed, ou sticky).deslocamento do elemento em relação ao seu elemento pai posicionado.*/
 
 .keys-check input:checked::before {
   left: 2.1rem;
@@ -72,6 +76,7 @@ header .column span {
   display: flex;
   margin-top: 40px;
 }
+
 .piano-keys .key {
   cursor: pointer;
   user-select: none;
@@ -98,7 +103,7 @@ header .column span {
   border-radius: 0 0 5px 5px;
   background: linear-gradient(#333, #000);
 }
-
+/*z-index cria outra dimensão*/
 .piano-keys span {
   position: absolute;
   bottom: 20px;
